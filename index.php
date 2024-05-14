@@ -15,10 +15,16 @@
             $this->main_actors = $_main_actors;
             $this->genre = $_genre;
         }
+
+        public function peopleInThisFilm(){
+            return $this->director . " " . $this->main_actors;
+        }
     }
     
+    $movies = [];
     $movie = new Movie("Titolo", "Director", 1984, "description", "main actor", "genre");
-    var_dump($movie);
+    $person = $movie->peopleInThisFilm();
+    var_dump($person);
 ?>
 
 <!DOCTYPE html>
